@@ -22,10 +22,12 @@ function App() {
     let numsArray = Array.from(String(semilla), nums)
     let arrayResult = [];
     arrayResult.push(numsArray[0], numsArray[1])
-    for(let i= 1; i < repeticiones; i++){
+    for(let i= 1; i <= repeticiones; i++){
+      console.log(arrayResult)
       arrayResult.push(arrayResult[arrayResult.length-1] + arrayResult[arrayResult.length-2])
     }
     setResultado(arrayResult)
+    console.log(arrayResult)
   }
 
   
@@ -39,7 +41,7 @@ function App() {
         <p className='informacion'>La cantidad de repeticiones es: {repeticiones}</p>
       </div>
       <div className='containerInformacion'>
-        <p className='resultado'>{resultado.join(',')}</p>
+        <p className='resultado'>{resultado.sort((a,b) => b-a).join(',')}</p>
       </div>
       <button className='btnCalcular' onClick={() => handleChange()}>Calcular serie Fibonacci</button>
     </div>

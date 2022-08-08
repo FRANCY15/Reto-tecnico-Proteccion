@@ -23,7 +23,7 @@ function App() {
     let arrayResult = [];
     arrayResult.push(numsArray[0], numsArray[1])
     console.log(arrayResult)
-    for(let i= 0; i <= repeticiones; i++){
+    for(let i= 1; i < repeticiones-1; i++){
       arrayResult.push(arrayResult[arrayResult.length-1] + arrayResult[arrayResult.length-2])
     }
     setResultado(arrayResult)

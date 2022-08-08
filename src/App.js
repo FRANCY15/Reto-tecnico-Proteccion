@@ -22,12 +22,10 @@ function App() {
     let numsArray = Array.from(String(semilla), nums)
     let arrayResult = [];
     arrayResult.push(numsArray[0], numsArray[1])
-    console.log(arrayResult)
-    for(let i= 1; i < repeticiones-1; i++){
+    for(let i= 1; i < repeticiones; i++){
       arrayResult.push(arrayResult[arrayResult.length-1] + arrayResult[arrayResult.length-2])
     }
     setResultado(arrayResult)
-    console.log(arrayResult)
   }
 
   
